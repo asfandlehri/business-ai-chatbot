@@ -16,9 +16,7 @@ function sendMessage(){
 
     chatBox.innerHTML += `
     <div class="user-message">
-        <div class="user-bubble">
-            👤 ${userMessage}
-        </div>
+        👤 ${userMessage}
     </div>
     `;
 
@@ -29,36 +27,201 @@ function sendMessage(){
     let msg = userMessage.toLowerCase();
     let botReply = "";
 
-    if(msg.includes("services")){
-        botReply = "🚀 We provide AI Chatbots, AI Agents, Website Development, Business Automation and Custom AI Solutions.";
+    // SERVICES
+    if(
+        msg.includes("service") ||
+        msg.includes("what do you do")
+    ){
+        botReply = `
+        🚀 Our Services:
+
+        • AI Chatbots
+        • AI Agents
+        • Business Automation
+        • Website Development
+        • Custom Web Applications
+        • Lead Generation Bots
+        • Customer Support Systems
+        • API Integrations
+        `;
     }
-    else if(msg.includes("pricing")){
-        botReply = "💰 Pricing depends on project requirements. Contact us on Fiverr for a custom quote.";
+
+    // PRICING
+    else if(
+        msg.includes("pricing") ||
+        msg.includes("price") ||
+        msg.includes("cost") ||
+        msg.includes("budget")
+    ){
+        botReply = `
+        💰 Pricing depends on project requirements.
+
+        Small Projects:
+        $50 - $200
+
+        Medium Projects:
+        $200 - $1000
+
+        Advanced AI Solutions:
+        Custom Quote
+
+        Contact me on Fiverr for an exact price.
+        `;
     }
-    else if(msg.includes("chatbot")){
-        botReply = "🤖 We build website chatbots, customer support bots, lead generation bots and AI business assistants.";
+
+    // CHATBOTS
+    else if(
+        msg.includes("chatbot") ||
+        msg.includes("chatbots")
+    ){
+        botReply = `
+        🤖 We build:
+
+        • Website Chatbots
+        • Customer Support Bots
+        • FAQ Bots
+        • AI Assistants
+        • Lead Generation Bots
+        • GPT/Groq Powered Bots
+        `;
     }
-    else if(msg.includes("automation")){
-        botReply = "⚡ We automate repetitive business tasks, workflows and customer interactions using AI.";
+
+    // AI AGENTS
+    else if(
+        msg.includes("agent") ||
+        msg.includes("ai agent")
+    ){
+        botReply = `
+        🧠 AI Agents can:
+
+        • Handle customer queries
+        • Automate workflows
+        • Process business tasks
+        • Generate reports
+        • Integrate with APIs
+        • Work 24/7
+        `;
     }
-    else if(msg.includes("contact")){
-        botReply = "📞 Please contact us through Fiverr messages and we will respond as soon as possible.";
+
+    // WEBSITE
+    else if(
+        msg.includes("website") ||
+        msg.includes("web app")
+    ){
+        botReply = `
+        🌐 Website Development Services:
+
+        • Business Websites
+        • Landing Pages
+        • Portfolio Websites
+        • AI Powered Websites
+        • Custom Dashboards
+        • Web Applications
+        `;
     }
-    else if(msg.includes("website")){
-        botReply = "🌐 We can build business websites, landing pages and AI-powered web applications.";
+
+    // AUTOMATION
+    else if(
+        msg.includes("automation") ||
+        msg.includes("automate")
+    ){
+        botReply = `
+        ⚡ Business Automation:
+
+        • Data Entry Automation
+        • Customer Support Automation
+        • Lead Management
+        • Workflow Automation
+        • AI Based Processes
+        `;
     }
-    else if(msg.includes("ai agent")){
-        botReply = "🧠 AI Agents can perform tasks, answer questions and automate workflows for your business.";
+
+    // CYBER SECURITY
+    else if(
+        msg.includes("cyber") ||
+        msg.includes("security")
+    ){
+        botReply = `
+        🔐 Cyber Security Solutions:
+
+        • Security Awareness Bots
+        • AI Security Assistants
+        • Security Training Systems
+        • Threat Information Systems
+        `;
     }
+
+    // HEALTH
+    else if(
+        msg.includes("health") ||
+        msg.includes("herbs")
+    ){
+        botReply = `
+        🌿 Health Information AI:
+
+        • Herbal Information Systems
+        • Health Knowledge Assistants
+        • Educational Health Chatbots
+        `;
+    }
+
+    // CONTACT
+    else if(
+        msg.includes("contact") ||
+        msg.includes("hire") ||
+        msg.includes("fiverr")
+    ){
+        botReply = `
+        📞 You can hire me through Fiverr.
+
+        Fiverr Username:
+        @intelligentapps
+
+        Click the green Fiverr button above.
+        `;
+    }
+
+    // GREETINGS
+    else if(
+        msg.includes("hi") ||
+        msg.includes("hello") ||
+        msg.includes("assalam") ||
+        msg.includes("salam")
+    ){
+        botReply = `
+        👋 Welcome to IntelligentApps!
+
+        I can help you with:
+
+        • AI Chatbots
+        • AI Agents
+        • Websites
+        • Automation
+        • Pricing
+        • Fiverr Contact
+        `;
+    }
+
+    // DEFAULT
     else{
-        botReply = "🤖 I can help you with Services, Pricing, AI Chatbots, AI Agents, Websites and Automation Solutions.";
+        botReply = `
+        🤖 Thanks for your message.
+
+        I specialize in:
+
+        • AI Chatbots
+        • AI Agents
+        • Business Automation
+        • Websites
+        • Custom AI Solutions
+
+        Ask me about services, pricing, projects or automation.
+        `;
     }
 
     chatBox.innerHTML += `
     <div class="bot-message" id="typing">
-        <div class="bot-bubble typing">
-            AI is typing...
-        </div>
+        ⏳ AI is typing...
     </div>
     `;
 
@@ -74,15 +237,13 @@ function sendMessage(){
 
         chatBox.innerHTML += `
         <div class="bot-message">
-            <div class="bot-bubble">
-                ${botReply}
-            </div>
+            🤖 ${botReply}
         </div>
         `;
 
         chatBox.scrollTop = chatBox.scrollHeight;
 
-    }, 1000);
+    }, 800);
 }
 
 document.getElementById("user-input")
