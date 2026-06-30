@@ -7,7 +7,10 @@ function sendMessage() {
     document.getElementById("chat-box");
 
     let userMessage = input.value;
-
+    
+    if(userMessage.trim() === ""){
+    return;
+}
     chatBox.innerHTML +=
     "<p><b>You:</b> " + userMessage + "</p>";
 
@@ -19,3 +22,11 @@ function sendMessage() {
 
     input.value = "";
 }
+document.getElementById("user-input")
+.addEventListener("keypress", function(event){
+
+    if(event.key === "Enter"){
+        sendMessage();
+    }
+
+});
