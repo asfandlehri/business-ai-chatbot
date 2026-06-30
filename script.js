@@ -44,4 +44,12 @@ function sendMessage(){
     }, 500);
 
     input.value = "";
+    document.getElementById("user-input")
+.addEventListener("keypress", function(event){
+
+    if(event.key === "Enter"){
+        sendMessage();
+    }
+
+});
 }
