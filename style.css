@@ -214,3 +214,71 @@ body{
     }
 
 }
+.stats-section{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+.stat-card{
+    background:#0f172a;
+    border:1px solid #38bdf8;
+    border-radius:15px;
+    padding:20px;
+    width:180px;
+    text-align:center;
+}
+
+.stat-card h3{
+    color:#38bdf8;
+    font-size:35px;
+    margin:0;
+}
+
+.why-section{
+    text-align:center;
+    margin-top:40px;
+}
+
+.why-section h2{
+    color:#38bdf8;
+}
+
+.why-grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+}
+
+.why-card{
+    background:#0f172a;
+    border:1px solid #38bdf8;
+    border-radius:15px;
+    padding:20px;
+    min-width:220px;
+    font-size:18px;
+}
+
+.testimonial-section{
+    text-align:center;
+    margin-top:50px;
+}
+
+.testimonial-section h2{
+    color:#38bdf8;
+}
+
+.testimonial-card{
+    background:#0f172a;
+    border-left:4px solid #38bdf8;
+    padding:20px;
+    border-radius:10px;
+    margin:15px auto;
+    max-width:700px;
+    text-align:left;
+}
