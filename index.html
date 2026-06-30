@@ -1,27 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>IntelligentApps AI Chatbot</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
 <div class="container">
 
-    <h1>IntelligentApps AI Chatbot</h1>
+    <div class="header">
+        <h1>IntelligentApps</h1>
+        <p>AI Chatbots • AI Agents • Automation Solutions</p>
+    </div>
 
-    <div id="chat-box"></div>
+    <div class="quick-buttons">
+        <button onclick="quickReply('services')">🚀 Services</button>
+        <button onclick="quickReply('pricing')">💰 Pricing</button>
+        <button onclick="quickReply('chatbot')">🤖 Chatbots</button>
+        <button onclick="quickReply('automation')">⚡ Automation</button>
+        <button onclick="quickReply('contact')">📞 Contact</button>
+    </div>
 
-    <input type="text" id="user-input"
-           placeholder="Ask something...">
+    <div id="chat-box">
+        <p><b>AI Assistant:</b> Welcome to IntelligentApps! Ask me about services, pricing, chatbots or automation.</p>
+    </div>
 
-    <button onclick="sendMessage()">
-        Send
-    </button>
+    <input type="text" id="user-input" placeholder="Type your message...">
+
+    <button onclick="sendMessage()">Send</button>
 
 </div>
 
 <script src="script.js"></script>
-
-</body>
-</html>
