@@ -19,7 +19,7 @@ function sendMessage() {
 
     chatBox.innerHTML +=
     "<p><b>Bot:</b> " + botReply + "</p>";
-
+chatBox.scrollTop = chatBox.scrollHeight;
     input.value = "";
 }
 document.getElementById("user-input")
