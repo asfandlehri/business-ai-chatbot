@@ -24,12 +24,29 @@
     </div>
 
     <div id="chat-box">
-        <p><b>AI Assistant:</b> Welcome to IntelligentApps! Ask me about services, pricing, chatbots or automation.</p>
+
+        <div class="bot-message">
+            <div class="bot-bubble">
+                🤖 Welcome to IntelligentApps! Ask me about services, pricing, chatbots or automation.
+            </div>
+        </div>
+
     </div>
 
-    <input type="text" id="user-input" placeholder="Type your message...">
+    <div class="input-area">
 
-    <button onclick="sendMessage()">Send</button>
+        <input
+        type="text"
+        id="user-input"
+        placeholder="Type your message...">
+
+        <button
+        class="send-btn"
+        onclick="sendMessage()">
+        Send
+        </button>
+
+    </div>
 
 </div>
 
