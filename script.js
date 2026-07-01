@@ -3,12 +3,25 @@ function quickReply(text){
     sendMessage();
 }
 
+function addBotMessage(message){
+
+    const chatBox = document.getElementById("chat-box");
+
+    chatBox.innerHTML += `
+    <div class="bot-message">
+        🤖 ${message}
+    </div>
+    `;
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
 function sendMessage(){
 
-    let input = document.getElementById("user-input");
-    let chatBox = document.getElementById("chat-box");
+    const input = document.getElementById("user-input");
+    const chatBox = document.getElementById("chat-box");
 
-    let userMessage = input.value.trim();
+    const userMessage = input.value.trim();
 
     if(userMessage === ""){
         return;
@@ -24,37 +37,114 @@ function sendMessage(){
 
     input.value = "";
 
-    let msg = userMessage.toLowerCase();
+    const msg = userMessage.toLowerCase();
+
     let botReply = "";
 
     // SERVICES
+
     if(
         msg.includes("service") ||
-        msg.includes("what do you do")
+        msg.includes("services")
     ){
+
         botReply = `
-        🚀 Our Services:
+        We provide:
 
         • AI Chatbots
         • AI Agents
+        • Web Applications
         • Business Automation
+        • Custom AI Solutions
         • Website Development
-        • Custom Web Applications
+        `;
+    }
+
+    // CHATBOTS
+
+    else if(
+        msg.includes("chatbot") ||
+        msg.includes("chatbots")
+    ){
+
+        botReply = `
+        I build:
+
+        • Website Chatbots
+        • Customer Support Bots
+        • FAQ Bots
         • Lead Generation Bots
-        • Customer Support Systems
-        • API Integrations
+        • AI Powered Assistants
+        • Custom Business Chatbots
+        `;
+    }
+
+    // AI AGENTS
+
+    else if(
+        msg.includes("agent") ||
+        msg.includes("ai agent")
+    ){
+
+        botReply = `
+        AI Agents can:
+
+        • Answer customer questions
+        • Automate tasks
+        • Manage workflows
+        • Process business operations
+        • Work 24/7 without breaks
+        `;
+    }
+
+    // WEB APPS
+
+    else if(
+        msg.includes("website") ||
+        msg.includes("web app") ||
+        msg.includes("web application")
+    ){
+
+        botReply = `
+        We build:
+
+        • Business Websites
+        • Landing Pages
+        • Dashboards
+        • AI Web Applications
+        • Custom Portals
+        • Client Management Systems
+        `;
+    }
+
+    // AUTOMATION
+
+    else if(
+        msg.includes("automation") ||
+        msg.includes("automate")
+    ){
+
+        botReply = `
+        Automation Services:
+
+        • Business Automation
+        • Workflow Automation
+        • Customer Support Automation
+        • Data Processing
+        • AI Powered Workflows
         `;
     }
 
     // PRICING
+
     else if(
-        msg.includes("pricing") ||
         msg.includes("price") ||
-        msg.includes("cost") ||
-        msg.includes("budget")
+        msg.includes("pricing") ||
+        msg.includes("cost")
     ){
+
         botReply = `
-        💰 Pricing depends on project requirements.
+        Pricing depends on your project requirements.
 
         Small Projects:
         $50 - $200
@@ -62,160 +152,127 @@ function sendMessage(){
         Medium Projects:
         $200 - $1000
 
-        Advanced AI Solutions:
+        Advanced Solutions:
         Custom Quote
 
-        Contact me on Fiverr for an exact price.
-        `;
-    }
-
-    // CHATBOTS
-    else if(
-        msg.includes("chatbot") ||
-        msg.includes("chatbots")
-    ){
-        botReply = `
-        🤖 We build:
-
-        • Website Chatbots
-        • Customer Support Bots
-        • FAQ Bots
-        • AI Assistants
-        • Lead Generation Bots
-        • GPT/Groq Powered Bots
-        `;
-    }
-
-    // AI AGENTS
-    else if(
-        msg.includes("agent") ||
-        msg.includes("ai agent")
-    ){
-        botReply = `
-        🧠 AI Agents can:
-
-        • Handle customer queries
-        • Automate workflows
-        • Process business tasks
-        • Generate reports
-        • Integrate with APIs
-        • Work 24/7
-        `;
-    }
-
-    // WEBSITE
-    else if(
-        msg.includes("website") ||
-        msg.includes("web app")
-    ){
-        botReply = `
-        🌐 Website Development Services:
-
-        • Business Websites
-        • Landing Pages
-        • Portfolio Websites
-        • AI Powered Websites
-        • Custom Dashboards
-        • Web Applications
-        `;
-    }
-
-    // AUTOMATION
-    else if(
-        msg.includes("automation") ||
-        msg.includes("automate")
-    ){
-        botReply = `
-        ⚡ Business Automation:
-
-        • Data Entry Automation
-        • Customer Support Automation
-        • Lead Management
-        • Workflow Automation
-        • AI Based Processes
+        Contact me on Fiverr for details.
         `;
     }
 
     // CYBER SECURITY
+
     else if(
         msg.includes("cyber") ||
         msg.includes("security")
     ){
-        botReply = `
-        🔐 Cyber Security Solutions:
 
-        • Security Awareness Bots
-        • AI Security Assistants
-        • Security Training Systems
-        • Threat Information Systems
+        botReply = `
+        I have worked on Cyber Security Assistant projects that help users learn security concepts and best practices.
         `;
     }
 
-    // HEALTH
+    // HEALTH AI
+
     else if(
         msg.includes("health") ||
-        msg.includes("herbs")
+        msg.includes("herbs") ||
+        msg.includes("herbal")
     ){
-        botReply = `
-        🌿 Health Information AI:
 
-        • Herbal Information Systems
-        • Health Knowledge Assistants
-        • Educational Health Chatbots
+        botReply = `
+        I have developed Herbs & Health AI projects focused on educational health and herbal information systems.
+        `;
+    }
+
+    // NATURE BOT
+
+    else if(
+        msg.includes("nature") ||
+        msg.includes("wildlife")
+    ){
+
+        botReply = `
+        I have also built Nature Information Bots that provide information about wildlife, plants and nature related topics.
+        `;
+    }
+
+    // PORTFOLIO
+
+    else if(
+        msg.includes("portfolio") ||
+        msg.includes("project") ||
+        msg.includes("projects")
+    ){
+
+        botReply = `
+        Previous Projects:
+
+        🤖 Business AI Chatbot
+
+        🔐 Cyber Security Assistant
+
+        🌿 Herbs & Health AI
+
+        🌍 Nature Information Bot
         `;
     }
 
     // CONTACT
+
     else if(
         msg.includes("contact") ||
         msg.includes("hire") ||
         msg.includes("fiverr")
     ){
-        botReply = `
-        📞 You can hire me through Fiverr.
 
-        Fiverr Username:
+        botReply = `
+        You can hire me through Fiverr.
+
+        Username:
         @intelligentapps
 
-        Click the green Fiverr button above.
+        Click the "Hire Me On Fiverr" button above.
         `;
     }
 
-    // GREETINGS
+    // GREETING
+
     else if(
-        msg.includes("hi") ||
         msg.includes("hello") ||
-        msg.includes("assalam") ||
-        msg.includes("salam")
+        msg.includes("hi") ||
+        msg.includes("salam") ||
+        msg.includes("assalam")
     ){
+
         botReply = `
-        👋 Welcome to IntelligentApps!
+        Welcome to IntelligentApps.
 
         I can help you with:
 
         • AI Chatbots
         • AI Agents
-        • Websites
+        • Web Applications
         • Automation
+        • Portfolio Information
         • Pricing
-        • Fiverr Contact
         `;
     }
 
     // DEFAULT
+
     else{
+
         botReply = `
-        🤖 Thanks for your message.
+        Thanks for your message.
 
         I specialize in:
 
         • AI Chatbots
         • AI Agents
-        • Business Automation
-        • Websites
-        • Custom AI Solutions
+        • Web Applications
+        • Automation Solutions
 
-        Ask me about services, pricing, projects or automation.
+        Ask me about services, projects, pricing or AI solutions.
         `;
     }
 
@@ -229,22 +286,18 @@ function sendMessage(){
 
     setTimeout(() => {
 
-        let typing = document.getElementById("typing");
+        const typing = document.getElementById("typing");
 
         if(typing){
             typing.remove();
         }
 
-        chatBox.innerHTML += `
-        <div class="bot-message">
-            🤖 ${botReply}
-        </div>
-        `;
+        addBotMessage(botReply);
 
-        chatBox.scrollTop = chatBox.scrollHeight;
-
-    }, 800);
+    }, 1000);
 }
+
+// ENTER KEY SUPPORT
 
 document.getElementById("user-input")
 .addEventListener("keypress", function(event){
@@ -254,3 +307,13 @@ document.getElementById("user-input")
     }
 
 });
+
+// WELCOME MESSAGE
+
+window.onload = function(){
+
+    const chatBox = document.getElementById("chat-box");
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+};
