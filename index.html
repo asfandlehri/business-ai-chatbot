@@ -1,127 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IntelligentApps AI Agency</title>
+    <title>IntelligentApps | AI Chatbots & AI Agents</title>
 
     <link rel="stylesheet" href="style.css">
-</head>
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
 <body>
 
-<div class="container">
+    <!-- NAVBAR -->
 
-    <div class="header">
+    <nav class="navbar">
 
-        <h1>IntelligentApps</h1>
-
-        <p>
-            AI Chatbots • AI Agents • Automation Solutions
-        </p>
-
-        <div class="online-status">
-            🟢 Online Now • Available For New Projects
+        <div class="logo">
+            🤖 IntelligentApps
         </div>
 
-    </div>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#chatbot">AI Demo</a></li>
+        </ul>
 
-    <div class="portfolio-section">
-
-        <h2>💼 Previous AI Projects & Demos</h2>
-
-        <p class="portfolio-text">
-            Examples of AI solutions and chatbot projects I have built.
-        </p>
-
-        <div class="project-buttons">
-
-            <button class="project-btn">
-                🤖 Business AI Chatbot
-                <span>Completed Project</span>
-            </button>
-
-            <button class="project-btn">
-                🔐 Cyber Security Assistant
-                <span>Completed Project</span>
-            </button>
-
-            <button class="project-btn">
-                🌿 Herbs & Health AI
-                <span>Completed Project</span>
-            </button>
-
-            <button class="project-btn">
-                🌍 Nature Information Bot
-                <span>Completed Project</span>
-            </button>
-
-        </div>
-
-    </div>
-
-    <div class="hire-section">
-
-        <a href="https://www.fiverr.com/intelligentapps" target="_blank">
-            <button class="hire-btn">
-                🚀 Hire Me On Fiverr
-            </button>
+        <a
+            href="https://www.fiverr.com/intelligentapps"
+            target="_blank"
+            class="nav-btn"
+        >
+            🚀 Hire Me
         </a>
 
-    </div>
+    </nav>
 
-    <div class="quick-buttons">
+    <!-- HERO -->
 
-        <button onclick="quickReply('services')">
-            🚀 Services
-        </button>
+    <section class="hero">
 
-        <button onclick="quickReply('pricing')">
-            💰 Pricing
-        </button>
+        <div class="hero-left">
 
-        <button onclick="quickReply('chatbot')">
-            🤖 Chatbots
-        </button>
+            <div class="badge">
+                🟢 Available For New Projects
+            </div>
 
-        <button onclick="quickReply('automation')">
-            ⚡ Automation
-        </button>
+            <h1>
+                AI Chatbots.<br>
+                AI Agents.<br>
+                Web Applications.
+            </h1>
 
-        <button onclick="quickReply('contact')">
-            📞 Contact
-        </button>
+            <p>
+                I build intelligent AI solutions that automate tasks,
+                engage users, improve customer support and help
+                businesses grow faster.
+            </p>
 
-    </div>
+            <div class="hero-buttons">
 
-    <div id="chat-box">
+                <a
+                    href="https://www.fiverr.com/intelligentapps"
+                    target="_blank"
+                    class="primary-btn"
+                >
+                    🚀 Hire Me On Fiverr
+                </a>
 
-        <div class="bot-message">
-            🤖 Welcome to IntelligentApps!
-            Ask me about services, pricing,
-            chatbots or automation.
+                <a href="#portfolio" class="secondary-btn">
+                    View Portfolio
+                </a>
+
+            </div>
+
+            <div class="hero-tags">
+                <span>⚡ Fast Delivery</span>
+                <span>🛠 Custom Solutions</span>
+                <span>📞 24/7 Support</span>
+                <span>⭐ Quality Work</span>
+            </div>
+
         </div>
 
-    </div>
+        <div class="hero-right">
 
-    <div class="input-area">
+            <img
+                src="https://cdn-icons-png.flaticon.com/512/4712/4712027.png"
+                alt="AI Robot"
+            >
 
-        <input
-            type="text"
-            id="user-input"
-            placeholder="Type your message..."
+        </div>
+
+    </section>
+
+    <!-- STATS -->
+
+    <section class="stats">
+
+        <div class="stat-card">
+            <h2>15+</h2>
+            <p>Projects Completed</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>10+</h2>
+            <p>Happy Clients</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>Fast</h2>
+            <p>Delivery</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>100%</h2>
+            <p>Support</p>
+        </div>
+
+    </section>
+
+    <!-- SERVICES -->
+
+    <section id="services" class="services">
+
+        <div class="section-title">
+            <span>WHAT I DO</span>
+            <h2>Premium AI Services</h2>
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <h3>🤖 AI Chatbots</h3>
+                <p>
+                    Custom AI chatbots for websites,
+                    customer support and lead generation.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>🧠 AI Agents</h3>
+                <p>
+                    Intelligent AI agents that automate
+                    workflows and business processes.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>💻 Web Applications</h3>
+                <p>
+                    Modern web applications using
+                    Python, Flask and AI technologies.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>⚙️ Automation</h3>
+                <p>
+                    Save time by automating repetitive
+                    business tasks and workflows.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PORTFOLIO -->
+
+    <section id="portfolio" class="portfolio">
+
+        <div class="section-title">
+            <span>MY WORK</span>
+            <h2>Previous AI Projects</h2>
+        </div>
+
+        <div class="portfolio-grid">
+
+            <div class="portfolio-card">
+                <h3>🤖 Business AI Chatbot</h3>
+                <p>AI assistant for customer support and lead generation.</p>
+            </div>
+
+            <div class="portfolio-card">
+                <h3>🔐 Cyber Security Assistant</h3>
+                <p>AI powered cybersecurity awareness assistant.</p>
+            </div>
+
+            <div class="portfolio-card">
+                <h3>🌿 Herbs & Health AI</h3>
+                <p>AI chatbot for herbs, nutrition and wellness information.</p>
+            </div>
+
+            <div class="portfolio-card">
+                <h3>🌍 Nature Information Bot</h3>
+                <p>Interactive AI bot for nature and wildlife knowledge.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- WHY CHOOSE ME -->
+
+    <section class="why-me">
+
+        <div class="section-title">
+            <span>WHY CHOOSE ME</span>
+            <h2>Professional AI Solutions</h2>
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">✅ Fast Communication</div>
+            <div class="why-card">✅ Business Focused</div>
+            <div class="why-card">✅ Clean Code</div>
+            <div class="why-card">✅ Scalable Systems</div>
+            <div class="why-card">✅ AI Expertise</div>
+            <div class="why-card">✅ Reliable Support</div>
+
+        </div>
+
+    </section>
+
+    <!-- TESTIMONIALS -->
+
+    <section id="testimonials" class="testimonials">
+
+        <div class="section-title">
+            <span>CLIENT FEEDBACK</span>
+            <h2>What Clients Say</h2>
+        </div>
+
+        <div class="testimonial-grid">
+
+            <div class="testimonial-card">
+                <h4>⭐⭐⭐⭐⭐</h4>
+                <p>
+                    Excellent communication and quick delivery.
+                    Highly professional work.
+                </p>
+            </div>
+
+            <div class="testimonial-card">
+                <h4>⭐⭐⭐⭐⭐</h4>
+                <p>
+                    Great AI solution. Everything worked exactly
+                    as expected.
+                </p>
+            </div>
+
+            <div class="testimonial-card">
+                <h4>⭐⭐⭐⭐⭐</h4>
+                <p>
+                    Strong technical skills and excellent support.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CHATBOT -->
+
+    <section id="chatbot" class="chatbot-section">
+
+        <div class="section-title">
+            <span>LIVE DEMO</span>
+            <h2>Try My AI Chatbot</h2>
+        </div>
+
+        <div class="chat-container">
+
+            <div id="chat-box">
+
+                <div class="bot-message">
+                    🤖 Welcome! Ask me about AI Chatbots,
+                    AI Agents, Web Apps or Automation.
+                </div>
+
+            </div>
+
+            <div class="input-area">
+
+                <input
+                    type="text"
+                    id="user-input"
+                    placeholder="Type your message..."
+                >
+
+                <button onclick="sendMessage()">
+                    Send
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <h2>Ready To Build Your AI Project?</h2>
+
+        <p>
+            Let's discuss your chatbot, AI agent or web application.
+        </p>
+
+        <a
+            href="https://www.fiverr.com/intelligentapps"
+            target="_blank"
+            class="primary-btn"
         >
+            🚀 Hire Me On Fiverr
+        </a>
 
-        <button onclick="sendMessage()">
-            Send
-        </button>
+    </section>
 
-    </div>
+    <!-- FOOTER -->
 
-</div>
+    <footer>
 
-<script src="script.js"></script>
+        <h3>🤖 IntelligentApps</h3>
+
+        <p>
+            AI Chatbots • AI Agents • Web Applications
+        </p>
+
+        <p>
+            © 2026 IntelligentApps. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
